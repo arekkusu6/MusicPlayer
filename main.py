@@ -1,6 +1,5 @@
 import tkinter as tk
 import os
-import pygame 
 from pygame import mixer
 
 
@@ -8,19 +7,15 @@ from pygame import mixer
 def play():
     song = musicList.get(tk.ACTIVE)
     mixer.music.load(song)
-    song_status.set(f'Playing {song}')
     mixer.music.play()
 
 def pause():
-    song_status.set("Paused")
     mixer.music.pause()
 
 def stop():
-    song_status.set("Stopped")
     mixer.music.stop()
 
 def resume():
-    song_status.set("Resuming")
     mixer.music.unpause()
 
 # Canvas
@@ -31,8 +26,6 @@ display.config(bg = 'black')
 
 # Pygame Mixer
 mixer.init()
-song_status = tk.StringVar()
-song_status.set("Select A Song")
 
 # Playlist
 os.chdir(r'D:\Playlist')
