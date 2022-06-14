@@ -21,7 +21,7 @@ def resume():
 # Canvas
 display = tk.Tk()
 display.title("Music Player")
-display.geometry("500x500")
+display.geometry("350x350")
 display.config(bg = 'black')
 
 # Pygame Mixer
